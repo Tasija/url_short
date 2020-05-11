@@ -1,0 +1,9 @@
+<!doctype html>
+
+<title>Admin URL Shortener All URLS</title>
+
+<h1>Short URL -> Original URL Stats</h1>
+{% for url in all_urls %}
+    <h2><a href="http://{{url[0]}}">{{url[0]}}</a> -> {{url[1]}}</h2>
+    <h3>Calls {{url[3]}} | Last Viewed {{url[-1]}}</h3>
+{% endfor %}
